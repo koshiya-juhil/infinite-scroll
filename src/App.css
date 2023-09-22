@@ -1,3 +1,24 @@
+/* CSS For Scrollbar Start */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 5px;
+  scrollbar-width: thin;
+  scrollbar-color: #b1b1b1 #f7f7f7;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #dbd8d8;
+  -webkit-border-radius: 50px;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background: #5c5c5c;
+}
+/* CSS For Scrollbar End */
+
 .App {
   text-align: center;
 }
@@ -32,7 +53,98 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+
+nav {
+  background-color: #424242;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav div {
+  color: wheat;
+  font-size: 1.7rem;
+}
+
+/* CSS For Loader Start */
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  margin: 2px;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #323131 transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* CSS For Loader ENd */
+
+/* CSS For Home  */
+.main-component {
+  list-style: none;
+  max-height: 87vh;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item {
+  display: flex;
+  margin: 10px 0px;
+  width: 800px;
+  cursor: pointer;
+  box-shadow: 1px 5px 6px #bebebe;
+  border-radius: 5px;
+}
+
+.item-img {
+  border-radius: 5px 0px 0px 5px;
+}
+
+.details {
+  margin-left: 10px;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+}
+
+.title {
+  margin: 0;
+}
+
+.description {
+  text-align: start;
 }
